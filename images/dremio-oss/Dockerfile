@@ -16,12 +16,10 @@
 
 FROM openjdk:8-jdk as run
 
-MAINTAINER Dremio
-
 LABEL org.label-schema.name='dremio/dremio-oss'
 LABEL org.label-schema.description='Dremio OSS.'
 
-ARG DOWNLOAD_URL=https://download.dremio.com/community-server/3.0.1-201811132128360291-804fe82/dremio-community-3.0.1-201811132128360291-804fe82.tar.gz
+ARG DOWNLOAD_URL=https://download.dremio.com/community-server/dremio-community-LATEST.tar.gz
 RUN \
   mkdir -p /opt/dremio \
   && mkdir -p /var/lib/dremio \
